@@ -53,16 +53,17 @@ class KLT_Locations_Registrations {
 		);
 
 		$supports = array(
-			'title'
+			'title',
+			'editor'
 		);
 
 		$args = array(
 			'labels'          => $labels,
 			'supports'        => $supports,
-			'public'          => true,
+			'public'          => TRUE,
 			'capability_type' => 'page',
-			'rewrite'         => array( 'slug' => 'location', ),
-			'has_archive'			=> 'locations',
+			'rewrite'         => array( 'slug' => 'location' ),
+			'has_archive'	  => FALSE,
 			'menu_position'   => 30,
 			'menu_icon'       => 'dashicons-admin-page',
 		);
@@ -107,6 +108,7 @@ class KLT_Locations_Registrations {
 			'rewrite'           => array( 'slug' => 'location-type' ),
 			'show_admin_column' => true,
 			'query_var'         => true,
+			'with_front'		=> false,
 		);
 
 		$args = apply_filters( 'KLT_Locations_Location_Type_Args', $args );
